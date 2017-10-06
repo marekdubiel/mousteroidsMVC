@@ -1,9 +1,17 @@
 package com.marekdubiel.main.model;
 
-public class ObjectManager implements Updatable{
+import com.marekdubiel.main.additional.Updatable;
+
+import java.util.List;
+
+public class ObjectManager implements Updatable {
 
     private static ObjectManager instance;
     private boolean running;
+
+    private List<ObjectAsteroid> asteroids;
+    private List<ObjectBullet> bullets;
+    private ObjectPlayer player;
 
     public static ObjectManager getInstance() {
         if(instance==null)
@@ -22,7 +30,7 @@ public class ObjectManager implements Updatable{
 
     private void runMainLoop(){
         int fps = Settings.getInstance().getFps();
-        Thread mainLoopThread = new Thread(new MainUpdateLoopAction(fps,ObjectManager.getInstance()));
+        Thread mainLoopThread = new Thread(new UpdateLoop(fps,ObjectManager.getInstance()));
         mainLoopThread.start();
     }
 

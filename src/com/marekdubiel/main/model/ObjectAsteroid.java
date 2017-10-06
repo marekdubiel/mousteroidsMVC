@@ -1,4 +1,5 @@
 package com.marekdubiel.main.model;
 
-public class ObjectAsteroid {
+public class ObjectAsteroid extends GameObject {
+
 }

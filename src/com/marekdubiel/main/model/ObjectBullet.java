@@ -1,4 +1,5 @@
 package com.marekdubiel.main.model;
 
-public class ObjectBullet {
+public class ObjectBullet extends GameObject {
 }
+
