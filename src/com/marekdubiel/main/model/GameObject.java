@@ -12,6 +12,7 @@ public class GameObject implements Collidable{
     private Sprite sprite;
     private Double2D position;
     private double rotation;
+    private double scale;
     private double speed;
     private double maxSpeed;
     private double direction;
@@ -62,6 +63,23 @@ public class GameObject implements Collidable{
     @Override
     public double getRotation(){
         return rotation;
+    }
+
+    public void setScale(double scale){
+        this.scale = scale;
+    }
+
+    @Override
+    public double getScale(){
+        return scale;
+    }
+
+    public void setAlive(boolean alive){
+        this.alive = alive;
+    }
+
+    public boolean getAlive(){
+        return alive;
     }
 
 

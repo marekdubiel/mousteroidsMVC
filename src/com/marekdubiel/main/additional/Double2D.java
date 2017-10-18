@@ -15,7 +15,7 @@ public class Double2D implements Comparable<Double2D>{
         this.x = x;
     }
 
-    public void setY(double x){
+    public void setY(double y){
         this.y = y;
     }
 
@@ -24,7 +24,7 @@ public class Double2D implements Comparable<Double2D>{
     }
 
     public double getY(){
-        return x;
+        return y;
     }
 
     @Override

@@ -1,4 +1,5 @@
 package com.marekdubiel.main.model;
 
-public class ObjectPlayer {
+public class ObjectPlayer extends GameObject{
+
 }
