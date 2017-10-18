@@ -2,32 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94e24da9-73b1-43e1-99d6-6f49f325ffe4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/GameState.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/calculateTests/AproximationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/calculateTests/DirectionTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/calculateTests/DistanceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/geometryTests/CollisionElementsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/geometryTests/CollisionTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/geometryTests/DummyPolygon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/geometryTests/RotationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/geometryTests/ScaleTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/geometryTests/TransformTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/Geometry.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/GameObject.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/GameObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/ObjectBullet.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/ObjectBullet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/ObjectManager.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/ObjectManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/ObjectPlayer.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/ObjectPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Calculate.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Calculate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Collidable.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Collidable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Double2D.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Double2D.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Geometry.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Geometry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Updatable.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Updatable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/GameObject.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/GameObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectBullet.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectBullet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectManager.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectPlayer.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/UpdateLoop.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/UpdateLoop.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_linux/git.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_linux/laf.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_linux/path.macros.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codestyles/Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/colors.scheme.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/debugger.renderers.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/debugger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/editor.codeinsight.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/editor.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui.lnf.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="648">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -987,7 +971,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
