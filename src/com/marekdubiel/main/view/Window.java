@@ -25,6 +25,7 @@ public class Window {
     private Parent createContent(){
         root = new Pane();
         root.setPrefSize(Settings.getInstance().getWindowWidth(), Settings.getInstance().getWindowWidth());
+        root.setStyle("-fx-background-color: #000000");
         return root;
     }
 }
