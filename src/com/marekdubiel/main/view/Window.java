@@ -2,8 +2,11 @@ package com.marekdubiel.main.view;
 
 import com.marekdubiel.main.model.Settings;
 
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -12,20 +15,19 @@ public class Window {
     private Stage stage;
 
     public Window(Stage stage){
-        stage.setScene(new Scene(createContent()));
-        stage.setResizable(false);
         stage.setTitle("mousteroids");
+        Group root = new Group;
+        Canvas canvas = new Canvas(Settings.getInstance().getWindowWidth(), Settings.getInstance().getWindowWidth());
+        GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
+        root.getChildren().add(canvas);
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
         stage.show();
     }
 
-    public Scene getScene(){
-        return new Scene(createContent());
-    }
-
-    private Parent createContent(){
-        root = new Pane();
-        root.setPrefSize(Settings.getInstance().getWindowWidth(), Settings.getInstance().getWindowWidth());
-        root.setStyle("-fx-background-color: #000000");
-        return root;
+    public void draw(){
+        //graphicContext.
+        //polygons position rotation stroke weight stroke colour fill colour
+        //text
     }
 }
