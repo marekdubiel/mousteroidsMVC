@@ -1,20 +1,13 @@
 package com.marekdubiel.main.model;
 
 import com.marekdubiel.main.additional.Updatable;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Predicate;
+import com.marekdubiel.main.view.ViewManager;
 
 public class ObjectManager implements Updatable {
 
     private static ObjectManager instance;
     private boolean running;
     private GameState gameState;
-
-    private List<ObjectAsteroid> asteroids;
-    private List<ObjectBullet> bullets;
-    private ObjectPlayer player;
 
     public static ObjectManager getInstance() {
         if(instance==null)
@@ -23,13 +16,12 @@ public class ObjectManager implements Updatable {
     }
 
     private ObjectManager(){
-
     }
 
     public void initializeModel() {
-        setRunning(true);
         runMainLoop();
         startMenu();
+        setRunning(true);
     }
 
     private void runMainLoop(){
@@ -39,38 +31,23 @@ public class ObjectManager implements Updatable {
     }
 
     public void startMenu(){
+        Menu.getInstance().start();
         setGameState(gameState.MENU);
     }
 
     public void startGame(){
+        Game.getInstance().start();
         setGameState(gameState.GAME);
-        initializeObjectLists();
-        initializePlayer();
-    }
 
-    private void initializeObjectLists(){
-        asteroids =new ArrayList<>();
-        bullets = new ArrayList<>();
-    }
-
-    private void initializePlayer(){
-        player = new ObjectPlayer();
     }
 
     @Override
     public void update(double delta){
-
-        player.update(delta);
-
-        manageGameObjects(asteroids,delta);
-        manageGameObjects(bullets,delta);
+        Game.getInstance().update(delta);
+        Menu.getInstance().update(delta);
+        ViewManager.getInstance().render();
     }
 
-    public void manageGameObjects(List<? extends GameObject> instances, double delta) {
-        for(int i=0;i<instances.size();i++)
-            instances.get(i).update(delta);
-        instances.removeIf(GameObject -> GameObject.getAlive()==false);
-    }
 
     public void setRunning(boolean running) {
         this.running = running;
@@ -89,12 +66,5 @@ public class ObjectManager implements Updatable {
         return gameState;
     }
 
-    public void spawnAsteroid(){
-
-    }
-
-    public void spawnBullet(){
-
-    }
 
 }
