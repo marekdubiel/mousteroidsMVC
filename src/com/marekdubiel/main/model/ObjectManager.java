@@ -19,14 +19,13 @@ public class ObjectManager implements Updatable {
     }
 
     public void initializeModel() {
-        runMainLoop();
         startMenu();
         setRunning(true);
     }
 
-    private void runMainLoop(){
+    public void runMainLoop(){
         int fps = Settings.getInstance().getFps();
-        Thread mainLoopThread = new Thread(new UpdateLoop(fps,ObjectManager.getInstance()));
+        Thread mainLoopThread = new Thread(new UpdateLoop(fps,ObjectManager.getInstance(),ViewManager.getInstance()));
         mainLoopThread.start();
     }
 
@@ -45,7 +44,7 @@ public class ObjectManager implements Updatable {
     public void update(double delta){
         Game.getInstance().update(delta);
         Menu.getInstance().update(delta);
-        ViewManager.getInstance().render();
+        //ViewManager.getInstance().render();
     }
 
 

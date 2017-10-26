@@ -17,14 +17,19 @@ public class Main extends Application {
     @Override
     public void start (Stage stage) throws Exception {
         setRules();
-        initializeView(stage);
-        initializeController();
         initializeModel();
+        initializeController();
+        initializeView(stage);
+        startLoop();
     }
 
     @Override
     public void stop (){
         ObjectManager.getInstance().setRunning(false);
+    }
+
+    private void startLoop(){
+        ObjectManager.getInstance().runMainLoop();
     }
 
     private void setRules(){

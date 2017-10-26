@@ -1,5 +1,6 @@
 package com.marekdubiel.main.view;
 
+import com.marekdubiel.main.additional.Double2D;
 import com.marekdubiel.main.model.Settings;
 
 import javafx.scene.Group;
@@ -10,9 +11,12 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.util.List;
+
 public class Window {
     private Pane root;
     private Canvas canvas;
+    private Scene scene;
     private Stage stage;
     private GraphicsContext graphicsContext;
 
@@ -27,27 +31,45 @@ public class Window {
         canvas = new Canvas(Settings.getInstance().getWindowWidth(), Settings.getInstance().getWindowWidth());
         graphicsContext = canvas.getGraphicsContext2D();
         root.getChildren().add(canvas);
-        stage.setScene(new Scene(root));
+        scene = new Scene(root);
+        stage.setScene(scene);
         stage.setResizable(false);
-        stage.show();
+        clear();
+        endFrame();
+        ViewManager.getInstance().setReady(true);
+
+
     }
 
     public void clear(){
-        GraphicsContext gc = canvas.getGraphicsContext2D();
-        gc.setFill(Color.BLACK);
-        gc.fillRect(0,0,canvas.getWidth(),canvas.getHeight());
-        stage.show();
+        graphicsContext.setFill(Color.BLACK);
+        graphicsContext.fillRect(0,0,canvas.getWidth(),canvas.getHeight());
     }
 
-    public void drawPolygon(Color strokeColor, Color fillColor){
+    public void drawPolygon(Color strokeColor, double strokeWidth, Color fillColor, List<Double2D> vertices){
+
+        int nPoints = vertices.size();
 
         graphicsContext.setStroke(strokeColor);
+        graphicsContext.setLineWidth(strokeWidth);
         graphicsContext.setFill(fillColor);
+
+
+        graphicsContext.fillPolygon(new double[]{10,100,100}, new double[]{10,100,10},2);
+        graphicsContext.strokePolygon(new double[]{10,100,100}, new double[]{10,100,10},3);
         //polygons position rotation stroke weight stroke colour fill colour
+
+    }
+
+    public void endFrame(){
         stage.show();
     }
 
     public void drawText(String text, double size, Color textColor){
 
+    }
+
+    public Scene getScene(){
+        return scene;
     }
 }
