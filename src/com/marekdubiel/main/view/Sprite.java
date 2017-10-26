@@ -70,7 +70,7 @@ public class Sprite {
         Node view;
         Polygon asteroidShape = new Polygon();
 
-        setView(view);
+
         setBounds(polygonVertices);
 
     }

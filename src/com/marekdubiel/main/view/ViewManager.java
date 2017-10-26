@@ -27,8 +27,8 @@ public class ViewManager {
     }
 
     public void render(){
-        sprites.forEach(Sprite::render);
+        //sprites.forEach(Sprite::render);
         //draw on canvas
-        window.draw();
+        window.clear();
     }
 }

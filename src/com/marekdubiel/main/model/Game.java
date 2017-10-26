@@ -31,10 +31,10 @@ public class Game {
     }
 
     public void update(double delta){
-        player.update(delta);
-        gui.update(delta);
-        manageGameObjects(asteroids,delta);
-        manageGameObjects(bullets,delta);
+        //player.update(delta);
+        //gui.update(delta);
+        //manageGameObjects(asteroids,delta);
+        //manageGameObjects(bullets,delta);
     }
 
     public void terminate(){
