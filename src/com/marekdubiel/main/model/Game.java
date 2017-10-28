@@ -33,8 +33,8 @@ public class Game {
     public void update(double delta){
         //player.update(delta);
         //gui.update(delta);
-        //manageGameObjects(asteroids,delta);
-        //manageGameObjects(bullets,delta);
+        manageGameObjects(asteroids,delta);
+        manageGameObjects(bullets,delta);
     }
 
     public void terminate(){
@@ -58,9 +58,10 @@ public class Game {
     }
 
     public void manageGameObjects(List<? extends GameObject> instances, double delta) {
-        for(int i=0;i<instances.size();i++)
-            instances.get(i).update(delta);
-        instances.removeIf(GameObject -> GameObject.getAlive()==false);
+        if(instances!=null) {
+            instances.forEach(instance -> instance.update(delta));
+            instances.removeIf(instance -> instance.getAlive() == false);
+        }
     }
 
     public void addAsteroid(AsteroidObject asteroid){

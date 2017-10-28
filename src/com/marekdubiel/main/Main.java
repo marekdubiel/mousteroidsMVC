@@ -17,10 +17,10 @@ public class Main extends Application {
     @Override
     public void start (Stage stage) throws Exception {
         setRules();
-        initializeModel();
-        initializeController();
         initializeView(stage);
-        startLoop();
+        initializeController();
+        initializeModel();
+        startMenu();
     }
 
     @Override
@@ -28,12 +28,12 @@ public class Main extends Application {
         ObjectManager.getInstance().setRunning(false);
     }
 
-    private void startLoop(){
-        ObjectManager.getInstance().runMainLoop();
+    private void startMenu(){
+        ObjectManager.getInstance().startMenu();
     }
 
     private void setRules(){
-        Settings.getInstance().setFps(30);
+        Settings.getInstance().setFps(25);
         Settings.getInstance().setWindowWidth(640);
         Settings.getInstance().setWindowHeight(480);
         Settings.getInstance().setDifficulty(1.5);

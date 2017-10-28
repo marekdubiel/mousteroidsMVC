@@ -19,8 +19,9 @@ public class ObjectManager implements Updatable {
     }
 
     public void initializeModel() {
-        startMenu();
         setRunning(true);
+        runMainLoop();
+
     }
 
     public void runMainLoop(){
@@ -44,7 +45,7 @@ public class ObjectManager implements Updatable {
     public void update(double delta){
         Game.getInstance().update(delta);
         Menu.getInstance().update(delta);
-        //ViewManager.getInstance().render();
+
     }
 
 

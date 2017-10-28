@@ -2,7 +2,6 @@ package com.marekdubiel.main.view;
 
 import com.marekdubiel.main.additional.Renderable;
 import javafx.application.Platform;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -31,13 +30,23 @@ public class ViewManager implements Renderable {
     }
 
     public void render(){
-        //sprites.forEach(Sprite::render);
-        //draw on canvas
         Platform.runLater(()-> {
             window.clear();
-            window.drawPolygon(Color.RED,Color.BLUE);
+            drawSprites();
             window.endFrame();
         });
+    }
+
+    private void drawSprites(){
+        if(sprites!=null)
+            sprites.removeIf(sprite -> sprite.getNeeded()==false);
+            sprites.forEach(sprite -> sprite.render(window.getGraphicsContext()));
+
+    }
+
+    public void addSprite(Sprite sprite){
+        sprite.setNeeded(true);
+        sprites.add(sprite);
     }
 
     public boolean getReady(){

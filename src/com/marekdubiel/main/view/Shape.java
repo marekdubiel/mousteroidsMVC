@@ -1,4 +1,0 @@
-package com.marekdubiel.main.view;
-
-public enum Shape { SPACESHIP,JET,CROSSHAIR,BULLET,HEART_EMPTY,HEART_FULL,ASTEROID_SML,ASTEROID_MED,ASTEROID_BIG}
-

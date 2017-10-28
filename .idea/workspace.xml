@@ -2,17 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94e24da9-73b1-43e1-99d6-6f49f325ffe4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/additional/Renderable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Renderable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/view/ShapeCreator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/view/TextSprite.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/ClickableSprite.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/RandomAsteroidShape.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/Shape.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/ShapeOperations.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/Sprite$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/view/ClickableSprite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/view/Shape.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/view/ShapeOperations.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/view/RandomAsteroidShape.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/view/ImageSprite.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/Main.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/Game.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/Game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/Menu.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/Menu.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/ObjectManager.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/ObjectManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/UpdateLoop.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/UpdateLoop.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/PlayerObject.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/model/PlayerObject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/Sprite.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/Sprite.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/ViewManager.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/ViewManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/Window.class" afterPath="$PROJECT_DIR$/out/production/mousteroidsMVC/com/marekdubiel/main/view/Window.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/Main.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/Game.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/GameObject.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/GameObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/Menu.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/Menu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectManager.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/PlayerObject.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/PlayerObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/model/UpdateLoop.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/model/UpdateLoop.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/view/Sprite.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/view/Sprite.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/view/ViewManager.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/view/ViewManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/marekdubiel/main/view/Window.java" afterPath="$PROJECT_DIR$/src/com/marekdubiel/main/view/Window.java" />
     </list>
@@ -28,48 +45,23 @@
     <favorites_list name="mousteroidsMVC" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Window.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/Window.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/ViewManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="37" column="51" lean-forward="false" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
       <find>controll</find>
       <find>bothAreLegalPolygons</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -83,11 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/additional/Double2D.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/additional/Calculate.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/additional/Collidable.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/additional/Geometry.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/DummyPolygon.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Double2D.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/GeometryTest.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/tests/additional/TransformTest.java" />
@@ -112,28 +99,33 @@
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectBullet.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/GameStates.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/GameState.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/Menu.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/ButtonObject.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/GameObject.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/AsteroidObject.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/GUI.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/GUI.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/SpriteManager.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/Shapes.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/ClickableSprite.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/PlayerObject.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/Shape.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/ShapeOperations.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/Sprite.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/AsteroidSpawner.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/Game.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/additional/renderable.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/additional/Renderable.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/shapeCreator.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/ShapeOperations.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/ShapeCreator.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/TextSprite.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/Game.java" />
+        <option value="$USER_HOME$/java/jdk1.8.0_144/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectManager.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/Sprite.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/Window.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/ImageSprite.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/Menu.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/PlayerObject.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/ViewManager.java" />
+        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/GameObject.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/model/UpdateLoop.java" />
         <option value="$PROJECT_DIR$/src/com/marekdubiel/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/ViewManager.java" />
-        <option value="$PROJECT_DIR$/src/com/marekdubiel/main/view/Window.java" />
       </list>
     </option>
   </component>
@@ -214,6 +206,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,30 +240,6 @@
             </path>
             <path>
               <item name="mousteroidsMVC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mousteroidsMVC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="marekdubiel" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="additional" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mousteroidsMVC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mousteroidsMVC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="marekdubiel" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mousteroidsMVC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mousteroidsMVC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="marekdubiel" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mousteroidsMVC" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -277,9 +247,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -620,24 +588,24 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34731543" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22651006" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.115264796" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24496645" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4261745" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22121212" sideWeight="0.49" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2439394" sideWeight="0.49" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2090909" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24664429" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37248322" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26060605" sideWeight="0.51" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -660,17 +628,17 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2090909" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24664429" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37248322" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34731543" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11409396" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24496645" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4261745" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21439394" sideWeight="0.49" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24015151" sideWeight="0.49" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26060605" sideWeight="0.51" order="4" side_tool="true" content_ui="tabs" />
@@ -694,34 +662,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="26" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/controller/InputManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/tests/additional.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/tests/additional/Geometry.java" />
-    <entry file="jar://$USER_HOME$/java/jdk1.8.0_144/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="104" column="19" lean-forward="false" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/java/jdk1.8.0_144/src.zip!/java/lang/Double.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/tests/additional/CalculateTest.java" />
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/tests/additional/calculateTests/DistanceTest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -788,13 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/java/jdk1.8.0_144/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/tests/additional/model/objectManagerTests/manageGameObjectsTest.java" />
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/tests/model/objectManagerTests/ManageGameObjectsTest.java" />
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/tests/additional/calculateTests/AproximationTest.java">
@@ -808,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -816,21 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/RandomAsteroidShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -860,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,37 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/ClickableSprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/shapes.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/PlayerObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,41 +800,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/additional/Geometry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="192" column="5" lean-forward="true" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/ShapeOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/Sprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/AsteroidSpawner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-457">
           <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -952,7 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,30 +825,129 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/RandomAsteroidShape.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/ClickableSprite.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/Shape.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/ShapeOperations.java" />
+    <entry file="file://$PROJECT_DIR$/resources/shapes.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/TextSprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/additional/Geometry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/ShapeCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/java/jdk1.8.0_144/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9211">
+          <caret line="637" column="0" lean-forward="false" selection-start-line="637" selection-start-column="0" selection-end-line="637" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/java/jdk1.8.0_144/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="18">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/ObjectManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/Sprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/PlayerObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/UpdateLoop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="546">
+          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/ImageSprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="57" column="70" lean-forward="false" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -999,26 +956,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        <state relative-caret-position="90">
+          <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/model/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/ViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="37" column="51" lean-forward="false" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marekdubiel/main/view/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <caret line="41" column="66" lean-forward="false" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

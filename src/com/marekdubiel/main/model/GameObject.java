@@ -23,7 +23,7 @@ public class GameObject implements Collidable{
     }
 
     public void update(Double delta){
-
+        System.out.println(delta);
     }
 
     public void moveAhead(){

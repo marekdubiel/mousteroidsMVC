@@ -24,7 +24,7 @@ public class UpdateLoop implements Runnable {
                 lastUpdate = System.currentTimeMillis();
                 update(delta);
                 render();
-                long waitingTime = Math.max(lastUpdate - System.currentTimeMillis() + 1000 / fps, 0);
+                long waitingTime = Math.max(1000/fps - (System.currentTimeMillis()-lastUpdate),0);
                 Thread.sleep(waitingTime);
             } catch (InterruptedException e) {
 
