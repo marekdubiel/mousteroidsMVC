@@ -20,8 +20,6 @@ public class Main extends Application {
         initializeModel();
         initializeView(stage);
         initializeController();
-        startMainLoop();
-        startGame();
     }
 
     @Override
@@ -47,14 +45,6 @@ public class Main extends Application {
 
     private void initializeController(){
         InputManager.getInstance().initializeController();
-    }
-
-    private void startMainLoop() {
-
-    }
-
-    private void startGame(){
-
     }
 
 }
