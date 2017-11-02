@@ -1,7 +1,6 @@
 package com.marekdubiel.main.view;
 
 import com.marekdubiel.main.additional.Double2D;
-import com.marekdubiel.main.model.CollidableObject;
 import com.marekdubiel.main.model.SimpleObject;
 import javafx.geometry.VPos;
 import javafx.scene.canvas.GraphicsContext;
@@ -44,7 +43,7 @@ public class TextSprite extends Sprite {
     }
 
     private void setSquidFont(){
-        font = Font.loadFont(getClass().getClassLoader().getResource("resources/squid.ttf").toExternalForm(),size);
+        font = Font.loadFont(getClass().getClassLoader().getResource("resources/squid.ttf").toString(),size);
     }
 
     private void activateSprite(int layer){

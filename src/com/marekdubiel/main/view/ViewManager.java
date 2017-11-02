@@ -21,10 +21,8 @@ public class ViewManager implements Renderable {
             return instance;
     }
 
-    private ViewManager(){
-
+    private ViewManager() {
     }
-
     public void initializeView(Stage stage){
         window = new Window(stage);
         shapeCreator = new ShapeCreator();
