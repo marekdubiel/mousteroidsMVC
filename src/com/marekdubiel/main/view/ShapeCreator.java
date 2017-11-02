@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class ShapeCreator {
 
     public static void create(ImageSprite parent, String shape){
-        String path = "resources/shapes_table.csv";
+        String path = "/resources/shapes.csv";
         switch(shape){
             case "spaceship":
                 parent.setVertices(loadFromFile(path,0));
@@ -60,7 +60,8 @@ public class ShapeCreator {
     }
 
     private static ArrayList<Double2D> loadFromFile(String filePath, int shapeRow){
-        File file = new File(ShapeCreator.class.getClassLoader().getResource(filePath).toExternalForm());
+        //File file = new File(filePath);
+        File file = new File(ShapeCreator.class.getResource(filePath).toExternalForm());
         ArrayList <Double2D> verticesFromFile = new ArrayList<>();
 
         try{
@@ -70,8 +71,8 @@ public class ShapeCreator {
                 fileInput.nextLine();
                 currentRow++;
             }
-            String[] xLine = fileInput.nextLine().split(",");
-            String[] yLine = fileInput.nextLine().split(",");
+            String[] xLine = fileInput.nextLine().split(";");
+            String[] yLine = fileInput.nextLine().split(";");
             for(int i=1;i<xLine.length;i++){
                 verticesFromFile.add(new Double2D(Double.parseDouble(xLine[i]),Double.parseDouble(yLine[i])));
             }
