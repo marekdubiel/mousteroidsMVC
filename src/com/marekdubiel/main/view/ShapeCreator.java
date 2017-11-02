@@ -12,29 +12,30 @@ import java.util.Scanner;
 public class ShapeCreator {
 
     public static void create(ImageSprite parent, String shape){
+        String path = "resources/shapes.csv";
         switch(shape){
             case "spaceship":
-                parent.setVertices(loadFromFile("resources/shapes.csv",0));
+                parent.setVertices(loadFromFile(path,0));
                 parent.setFillColor(Color.BLACK);
                 break;
             case "jet":
-                parent.setVertices(loadFromFile("resources/shapes.csv",2));
+                parent.setVertices(loadFromFile(path,2));
                 parent.setFillColor(Color.BLACK);
                 break;
-            case "ctosshair":
-                parent.setVertices(loadFromFile("resources/shapes.csv",4));
-                parent.setFillColor(null);
+            case "crosshair":
+                parent.setVertices(loadFromFile(path,4));
+                parent.setFillColor(Color.BLACK);
                 break;
             case "bullet":
-                parent.setVertices(loadFromFile("resources/shapes.csv",6));
+                parent.setVertices(loadFromFile(path,6));
                 parent.setFillColor(Color.BLACK);
                 break;
             case "heartEmpty":
-                parent.setVertices(loadFromFile("resources/shapes.csv",8));
+                parent.setVertices(loadFromFile(path,8));
                 parent.setFillColor(Color.BLACK);
                 break;
             case "heartFull":
-                parent.setVertices(loadFromFile("resources/shapes.csv",8));
+                parent.setVertices(loadFromFile(path,8));
                 parent.setFillColor(Color.WHITE);
                 break;
             case "asteroidSmall":
@@ -58,14 +59,15 @@ public class ShapeCreator {
     }
 
     private static ArrayList<Double2D> loadFromFile(String filePath, int shapeRow){
-        File file = new File(filePath);
+        File file = new File("resources/shapes.csv");
+        //File file = new File(ShapeCreator.class.getClassLoader().getResource(filePath).toExternalForm());
         ArrayList <Double2D> verticesFromFile = new ArrayList<>();
-
         try{
             Scanner fileInput = new Scanner(file);
             int currentRow = 0;
-            while(currentRow<shapeRow){
+            while(currentRow<shapeRow) {
                 fileInput.nextLine();
+                currentRow++;
             }
             String[] xLine = fileInput.nextLine().split(";");
             String[] yLine = fileInput.nextLine().split(";");
@@ -73,7 +75,7 @@ public class ShapeCreator {
                 verticesFromFile.add(new Double2D(Double.parseDouble(xLine[i]),Double.parseDouble(yLine[i])));
             }
 
-        }catch(FileNotFoundException |NoSuchElementException exception){
+        }catch(FileNotFoundException | NoSuchElementException exception){
             exception.printStackTrace();
         }
 

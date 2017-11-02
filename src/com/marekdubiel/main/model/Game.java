@@ -27,12 +27,11 @@ public class Game {
     public void start() {
         initializeObjectLists();
         initializePlayer();
-        initializeGUI();
     }
 
     public void update(double delta){
-        //player.update(delta);
-        //gui.update(delta);
+        if(player!=null)
+            player.update(delta);
         manageGameObjects(asteroids,delta);
         manageGameObjects(bullets,delta);
     }
@@ -53,11 +52,7 @@ public class Game {
         player = new PlayerObject();
     }
 
-    private void initializeGUI(){
-        gui = new GUI();
-    }
-
-    public void manageGameObjects(List<? extends GameObject> instances, double delta) {
+    public void manageGameObjects(List<? extends CollidableObject> instances, double delta) {
         if(instances!=null) {
             instances.forEach(instance -> instance.update(delta));
             instances.removeIf(instance -> instance.getAlive() == false);

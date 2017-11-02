@@ -11,7 +11,8 @@ public class ViewManager implements Renderable {
 
     private static ViewManager instance = null;
     private Window window;
-    private List<Sprite> sprites;
+    private ShapeCreator shapeCreator;
+    private List<Layer> layers;
     private boolean ready;
 
     public static ViewManager getInstance(){
@@ -26,27 +27,30 @@ public class ViewManager implements Renderable {
 
     public void initializeView(Stage stage){
         window = new Window(stage);
-        sprites = new ArrayList<>();
+        shapeCreator = new ShapeCreator();
+        initializeLayers();
+    }
+
+    private void initializeLayers(){
+        layers = new ArrayList<>();
+        for(int i=0;i<10;i++)
+            layers.add(new Layer());
     }
 
     public void render(){
         Platform.runLater(()-> {
             window.clear();
-            drawSprites();
+            drawLayers();
             window.endFrame();
         });
     }
 
-    private void drawSprites(){
-        if(sprites!=null)
-            sprites.removeIf(sprite -> sprite.getNeeded()==false);
-            sprites.forEach(sprite -> sprite.render(window.getGraphicsContext()));
-
+    private void drawLayers(){
+        layers.forEach(layer -> layer.drawSprites(window.getGraphicsContext()));
     }
 
-    public void addSprite(Sprite sprite){
-        sprite.setNeeded(true);
-        sprites.add(sprite);
+    public void addSprite(Sprite sprite, int layer){
+        layers.get(sprite.getLayer()).addSprite(sprite);
     }
 
     public boolean getReady(){
@@ -55,5 +59,9 @@ public class ViewManager implements Renderable {
 
     public void setReady(boolean ready){
         this.ready = ready;
+    }
+
+    public ShapeCreator getShapeCreator() {
+        return shapeCreator;
     }
 }

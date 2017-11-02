@@ -1,5 +1,7 @@
 package com.marekdubiel.main.model;
 
+import com.marekdubiel.main.additional.Double2D;
+
 public class Settings {
     private static Settings instance = null;
 
@@ -57,5 +59,9 @@ public class Settings {
 
     public int getFps(){
         return fps;
+    }
+
+    public Double2D centerPoint(){
+        return new Double2D(getWindowWidth()/2,getWindowHeight()/2);
     }
 }

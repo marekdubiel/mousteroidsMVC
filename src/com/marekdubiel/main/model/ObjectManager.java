@@ -30,6 +30,15 @@ public class ObjectManager implements Updatable {
         mainLoopThread.start();
     }
 
+    public void start(){
+        initializeGUI();
+        startMenu();
+    }
+
+    public void initializeGUI(){
+        GUI.getInstance().initialize();
+    }
+
     public void startMenu(){
         Menu.getInstance().start();
         setGameState(gameState.MENU);
@@ -43,6 +52,7 @@ public class ObjectManager implements Updatable {
 
     @Override
     public void update(double delta){
+        GUI.getInstance().update();
         Game.getInstance().update(delta);
         Menu.getInstance().update(delta);
 

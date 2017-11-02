@@ -1,6 +1,7 @@
 package com.marekdubiel.main;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import com.marekdubiel.main.model.*;
@@ -18,9 +19,9 @@ public class Main extends Application {
     public void start (Stage stage) throws Exception {
         setRules();
         initializeView(stage);
-        initializeController();
+        initializeController(stage.getScene());
         initializeModel();
-        startMenu();
+        start();
     }
 
     @Override
@@ -28,8 +29,8 @@ public class Main extends Application {
         ObjectManager.getInstance().setRunning(false);
     }
 
-    private void startMenu(){
-        ObjectManager.getInstance().startMenu();
+    private void start(){
+        ObjectManager.getInstance().start();
     }
 
     private void setRules(){
@@ -48,8 +49,8 @@ public class Main extends Application {
         ViewManager.getInstance().initializeView(stage);
     }
 
-    private void initializeController(){
-        InputManager.getInstance().initializeController();
+    private void initializeController(Scene scene){
+        InputManager.getInstance().initializeController(scene);
     }
 
 }

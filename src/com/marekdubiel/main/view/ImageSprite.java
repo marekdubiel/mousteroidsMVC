@@ -1,10 +1,12 @@
 package com.marekdubiel.main.view;
 
 import com.marekdubiel.main.additional.Double2D;
-import com.marekdubiel.main.model.GameObject;
+import com.marekdubiel.main.model.CollidableObject;
+import com.marekdubiel.main.model.SimpleObject;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,19 +21,19 @@ public class ImageSprite extends Sprite {
     private Color strokeColor;
     private double strokeWidth;
 
-    public ImageSprite(String shape, GameObject parent){
-        super(parent);
-        asignShape(shape);
-        activateSprite();
+    public ImageSprite(String shape, int layer, SimpleObject parent){
+        super(parent, layer);
+        assignShape(shape);
+        activateSprite(layer);
     }
 
-    private void activateSprite(){
-        ViewManager.getInstance().addSprite(this);
+    private void activateSprite(int layer){
+        ViewManager.getInstance().addSprite(this, layer);
         super.update();
     }
 
-    private void asignShape(String shape){
-        ShapeCreator.create(this,shape);
+    private void assignShape(String shape){
+        ViewManager.getInstance().getShapeCreator().create(this,shape);
     }
 
     public void setVertices(ArrayList<Double2D> vertices){
@@ -87,8 +89,10 @@ public class ImageSprite extends Sprite {
         return vertices.size();
     }
 
-    public List<Double2D> getBounds(){
-        return vertices;
+    public ArrayList<Double2D> getBounds(){
+        if (parent.getClass() == CollidableObject.class)
+            return vertices;
+        return null;
     }
 
 }

@@ -56,4 +56,32 @@ public class Double2D implements Comparable<Double2D>{
             return 1;
         return 0;
     }
+
+    public static Double2D add(Double2D first, Double2D second){
+        if (first == null && second == null)
+            return null;
+        else if (first == null)
+            return second;
+        else if (second == null)
+            return first;
+        else {
+            double x = first.getX() + second.getX();
+            double y = first.getY() + second.getY();
+            return new Double2D(x, y);
+        }
+    }
+
+    public static Double2D multiply(Double2D first, Double2D second){
+        if (first == null && second == null)
+            return null;
+        else if (first == null)
+            return second;
+        else if (second == null)
+            return first;
+        else {
+            double x = first.getX() * second.getX();
+            double y = first.getY() * second.getY();
+            return new Double2D(x, y);
+        }
+    }
 }

@@ -1,21 +1,26 @@
 package com.marekdubiel.main.model;
 
+import com.marekdubiel.main.additional.Calculate;
 import com.marekdubiel.main.additional.Double2D;
+import com.marekdubiel.main.controller.InputManager;
 import com.marekdubiel.main.view.ImageSprite;
 import com.marekdubiel.main.view.Sprite;
 
-public class PlayerObject extends GameObject{
-    Sprite sprite;
+public class PlayerObject extends CollidableObject {
+
     public PlayerObject(){
         initialize();
     }
 
     private void initialize(){
-        super.setPosition(new Double2D(Settings.getInstance().getWindowWidth()/2,Settings.getInstance().getWindowHeight()/2));
-        super.setRotation(90);
-        super.setScale(1);
-        super.setAlive(true);
-        sprite = new ImageSprite("spaceship",this);
+        super.initializeGeneralObject(Settings.getInstance().centerPoint());
+        super.initializeImageObject("spaceship",6,90,1);
+        super.assignBoundingBoxFromSprite();
+    }
+
+    public void update(double delta){
+        super.update(delta);
+        setRotation(Calculate.direction(InputManager.getInstance().getFocusPoint(),getPosition()));
     }
 
 }

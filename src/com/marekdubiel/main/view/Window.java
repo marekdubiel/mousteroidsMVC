@@ -3,8 +3,10 @@ package com.marekdubiel.main.view;
 import com.marekdubiel.main.additional.Double2D;
 import com.marekdubiel.main.model.Settings;
 
+import javafx.scene.Cursor;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.SceneBuilder;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
@@ -34,6 +36,7 @@ public class Window {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
+        root.setCursor(Cursor.NONE);
         clear();
         endFrame();
         ViewManager.getInstance().setReady(true);
@@ -52,5 +55,9 @@ public class Window {
 
     public GraphicsContext getGraphicsContext(){
         return graphicsContext;
+    }
+
+    public Scene getScene(){
+        return scene;
     }
 }
