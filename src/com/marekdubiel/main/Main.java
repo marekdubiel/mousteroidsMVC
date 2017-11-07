@@ -1,6 +1,7 @@
 package com.marekdubiel.main;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import com.marekdubiel.main.model.*;
@@ -17,18 +18,24 @@ public class Main extends Application {
     @Override
     public void start (Stage stage) throws Exception {
         setRules();
-        initializeModel();
         initializeView(stage);
-        initializeController();
+        initializeController(stage.getScene());
+        initializeModel();
+        start();
     }
 
     @Override
     public void stop (){
         ObjectManager.getInstance().setRunning(false);
+        System.out.println("koniec");
+    }
+
+    private void start(){
+        ObjectManager.getInstance().start();
     }
 
     private void setRules(){
-        Settings.getInstance().setFps(30);
+        Settings.getInstance().setFps(25);
         Settings.getInstance().setWindowWidth(640);
         Settings.getInstance().setWindowHeight(480);
         Settings.getInstance().setDifficulty(1.5);
@@ -43,8 +50,8 @@ public class Main extends Application {
         ViewManager.getInstance().initializeView(stage);
     }
 
-    private void initializeController(){
-        InputManager.getInstance().initializeController();
+    private void initializeController(Scene scene){
+        InputManager.getInstance().initializeController(scene);
     }
 
 }

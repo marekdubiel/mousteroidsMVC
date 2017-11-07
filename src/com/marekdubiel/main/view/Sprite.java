@@ -1,97 +1,53 @@
 package com.marekdubiel.main.view;
 
 import com.marekdubiel.main.additional.Double2D;
-import com.marekdubiel.main.model.GameObject;
-import javafx.scene.Node;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Polygon;
+import com.marekdubiel.main.model.CollidableObject;
+import com.marekdubiel.main.model.SimpleObject;
+import javafx.scene.canvas.GraphicsContext;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import static com.marekdubiel.main.view.ShapeOperations.generateRandomAsteroidShape;
-import static com.marekdubiel.main.view.ShapeOperations.loadFromFile;
-
-public class Sprite {
-    Node view;
-    GameObject parentObject;
-    List<Double2D> vertices = new ArrayList<>();
+public abstract class Sprite {
+    SimpleObject parent;
     Double2D position;
     double rotation;
     double scale;
-    Color fill;
+    boolean needed;
+    int layer;
 
-    public Sprite(GameObject object, Shape shape){
-        this.parentObject = object;
-        loadShape(shape);
+    public Sprite(SimpleObject object, int layer){
+        this.parent = object;
+        setLayer(layer);
     }
 
-    private void loadShape(Shape shape){
-        switch(shape){
-            case SPACESHIP:
-                createView(loadFromFile("resources/shapes.csv",0),Color.BLACK);
-                fill = Color.BLACK;
-                break;
-            case JET:
-                createView(loadFromFile("resources/shapes.csv",2),Color.BLACK);
-                fill = Color.BLACK;
-                break;
-            case CROSSHAIR:
-                createView(loadFromFile("resources/shapes.csv",4),Color.BLACK);
-                fill = Color.BLACK;
-                break;
-            case BULLET:
-                createView(loadFromFile("resources/shapes.csv",6),Color.BLACK);
-                fill = Color.BLACK;
-                break;
-            case HEART_EMPTY:
-                createView(loadFromFile("resources/shapes.csv",6),Color.BLACK);
-                fill = Color.BLACK;
-                break;
-            case HEART_FULL:
-                createView(loadFromFile("resources/shapes.csv",6),Color.WHITE);
-                fill = Color.WHITE;
-                break;
-            case ASTEROID_SML:
-                createView(generateRandomAsteroidShape(1),Color.BLACK);
-                fill = Color.BLACK;
-                break;
-            case ASTEROID_MED:
-                createView(generateRandomAsteroidShape(2),Color.BLACK);
-                fill = Color.BLACK;
-                break;
-            case ASTEROID_BIG:
-                createView(generateRandomAsteroidShape(3),Color.BLACK);
-                break;
+    abstract void render(GraphicsContext graphicsContext);
+
+    public abstract ArrayList<Double2D> getBounds();
+
+    public void update(){
+        if(parent!=null) {
+            setNeeded(parent.getAlive());
+            position = parent.getPosition();
+            rotation = parent.getRotation();
+            scale = parent.getScale();
+        }else{
+            setNeeded(false);
         }
     }
 
-    public void createView(List<Double2D> polygonVertices, Color color){
-        Node view;
-        Polygon asteroidShape = new Polygon();
-
-        setView(view);
-        setBounds(polygonVertices);
-
+    public void setNeeded(boolean needed){
+        this.needed = needed;
     }
 
-    public void setView(Node view){
-        this.view = view;
+    public boolean getNeeded(){
+        return needed;
     }
 
-    public Node getView(){
-        return view;
+    public void setLayer(int layer){
+        this.layer = Math.min(9,Math.max(0,layer));
     }
 
-    public void setBounds(List<Double2D> vertices){
-        this.vertices = vertices;
-    }
-
-    public List<Double2D> getBounds(){
-        return vertices;
-    }
-
-    public void render(){
-
+    public int getLayer(){
+        return layer;
     }
 }

@@ -15,7 +15,7 @@ public class AsteroidSpawner {
     public AsteroidSpawner(){
         initializeTimer();
         asteroidCount = 0;
-        spawning = true;
+        spawning = false;
 
     }
 
