@@ -43,7 +43,7 @@ public class TextSprite extends Sprite {
     }
 
     private void setSquidFont(){
-        font = Font.loadFont(getClass().getClassLoader().getResource("resources/squid.ttf").toString(),size);
+        font = Font.loadFont(getClass().getClassLoader().getResource("resources/squid.ttf").toExternalForm(),size);
     }
 
     private void activateSprite(int layer){

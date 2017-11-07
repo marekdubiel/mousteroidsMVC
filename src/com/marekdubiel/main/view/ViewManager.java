@@ -62,4 +62,5 @@ public class ViewManager implements Renderable {
     public ShapeCreator getShapeCreator() {
         return shapeCreator;
     }
+
 }

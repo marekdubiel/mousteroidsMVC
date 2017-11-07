@@ -27,6 +27,7 @@ public class Main extends Application {
     @Override
     public void stop (){
         ObjectManager.getInstance().setRunning(false);
+        System.out.println("koniec");
     }
 
     private void start(){
