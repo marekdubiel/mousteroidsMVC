@@ -18,7 +18,7 @@ public class Score {
     private void createTextObject(Double2D position, int score){
         textObject= new SimpleObject();
         textObject.initializeGeneralObject(position);
-        textObject.initializeTextObject(Integer.toString(score),25,8,true);
+        textObject.initializeTextObject(Integer.toString(score),38,8,true);
     }
 
     public void setScore(int score){

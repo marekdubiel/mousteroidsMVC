@@ -13,6 +13,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.StrokeLineJoin;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -31,7 +32,7 @@ public class Window {
     }
 
     private void initializeWindow(){
-        stage.setTitle("mousteroids");
+        stage.setTitle("mAuSTEROIDS");
         root = new Pane();
         canvas = new Canvas(Settings.getInstance().getWindowWidth(), Settings.getInstance().getWindowHeight());
         graphicsContext = canvas.getGraphicsContext2D();
@@ -41,6 +42,7 @@ public class Window {
         stage.setResizable(false);
         stage.sizeToScene();
         root.setCursor(Cursor.NONE);
+        graphicsContext.setLineJoin(StrokeLineJoin.ROUND);
         clear();
         endFrame();
         ViewManager.getInstance().setReady(true);
@@ -58,10 +60,6 @@ public class Window {
 
     public GraphicsContext getGraphicsContext(){
         return graphicsContext;
-    }
-
-    public Scene getScene(){
-        return scene;
     }
 
     private void exitProgramIfWindowClosed(){

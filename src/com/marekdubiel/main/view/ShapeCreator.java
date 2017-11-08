@@ -53,7 +53,7 @@ public class ShapeCreator {
                 break;
         }
         parent.setStrokeColor(Color.WHITE);
-        parent.setStrokeWidth(1.0);
+        parent.setStrokeWidth(1.5);
 
     }
 
@@ -79,11 +79,11 @@ public class ShapeCreator {
     }
 
     public static ArrayList<Double2D> generateRandomAsteroidShape(int size){
-        int sides = 5 +(int)(Math.random()*4);
+        int sides = 9+size +(int)(Math.random()*6);
         ArrayList<Double2D> vertices = new ArrayList<Double2D>();
         for(int i=0;i<sides; i++){
             double angle = i*(360.0/sides) + Math.random()*(360.0/sides);
-            double radius = Math.random()*7.5 + 5;
+            double radius = Math.random()*4.5 + 5+size;
             vertices.add(new Double2D(radius*Math.cos(Math.toRadians(angle)),radius*Math.sin(Math.toRadians(angle))));
         }
         return vertices;

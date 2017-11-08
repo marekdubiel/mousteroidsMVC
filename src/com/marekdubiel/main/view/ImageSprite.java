@@ -44,6 +44,10 @@ public class ImageSprite extends Sprite {
         this.fillColor = fillColor;
     }
 
+    public void reverseFillColor(){
+        this.fillColor = Color.rgb(255-(int)(fillColor.getRed()*255),255-(int)(fillColor.getGreen()*255),255-((int)fillColor.getBlue()*255));
+    }
+
     public void setStrokeColor(Color strokeColor){
         this.strokeColor = strokeColor;
     }
@@ -90,9 +94,7 @@ public class ImageSprite extends Sprite {
     }
 
     public ArrayList<Double2D> getBounds(){
-        if (parent.getClass() == CollidableObject.class)
-            return vertices;
-        return null;
+        return vertices;
     }
 
 }

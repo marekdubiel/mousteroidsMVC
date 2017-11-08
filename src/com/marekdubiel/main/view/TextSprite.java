@@ -38,6 +38,10 @@ public class TextSprite extends Sprite {
         this.fontColor = Color.WHITE;
     }
 
+    public void reverseFontColor(){
+        this.fontColor = Color.rgb(255-(int)(fontColor.getRed()*255),255-(int)(fontColor.getGreen()*255),255-((int)fontColor.getBlue()*255));
+    }
+
     public void setBlackFont(){
         this.fontColor = Color.BLACK;
     }

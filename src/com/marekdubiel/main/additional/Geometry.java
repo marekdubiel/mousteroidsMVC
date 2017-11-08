@@ -127,6 +127,26 @@ public class Geometry {
         return false;
     }
 
+    public static boolean singleVertexIsIncluded(ArrayList<Double2D> vertices, Double2D vertexToCheck){
+        int segmentsDirectlyOnRightSideOfVertex = 0;
+        Double2D segmentPoint1;
+        Double2D segmentPoint2;
+
+        for (int i=0;i<vertices.size();i++) {
+            segmentPoint1 = vertices.get(i);
+            if (i == vertices.size()-1)
+                segmentPoint2 = vertices.get(0);
+            else
+                segmentPoint2 = vertices.get(i+1);
+
+            if (pointIsDirectlyOnLeftSideOfSegment(vertexToCheck, segmentPoint1, segmentPoint2))
+                segmentsDirectlyOnRightSideOfVertex++;
+        }
+        if (segmentsDirectlyOnRightSideOfVertex % 2 ==1)
+            return true;
+        return false;
+    }
+
     public static boolean pointIsDirectlyOnLeftSideOfSegment(Double2D pointToCheck, Double2D segmentPoint1, Double2D segmentPoint2){
 
         if (pointToCheck.getY()>Math.min(segmentPoint1.getY(),segmentPoint2.getY()) &&

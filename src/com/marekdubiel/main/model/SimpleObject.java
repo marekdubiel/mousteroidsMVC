@@ -12,8 +12,10 @@ public class SimpleObject {
     private double rotation;
     private double scale;
     private boolean alive;
+    private boolean ready;
 
     public SimpleObject(){
+        setReady(false);
     }
 
     public void initializeGeneralObject(Double2D position){
@@ -24,6 +26,7 @@ public class SimpleObject {
         setRotation(rotation);
         setScale(scale);
         sprite = new ImageSprite(shape,layer,this);
+        setReady(true);
 
     }
 
@@ -31,6 +34,7 @@ public class SimpleObject {
         setRotation(0);
         setScale(1);
         sprite = new TextSprite(text, size, layer, this, whiteFont);
+        setReady(true);
     }
 
     public Sprite getSprite(){
@@ -67,6 +71,14 @@ public class SimpleObject {
 
     public boolean getAlive(){
         return alive;
+    }
+
+    public void setReady(boolean ready){
+        this.ready = ready;
+    }
+
+    public boolean getReady(){
+        return ready;
     }
 
     public void moveAhead(){

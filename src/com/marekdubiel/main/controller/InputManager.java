@@ -27,7 +27,8 @@ public class InputManager {
     }
 
     public void initializeController(Scene scene){
-        setFocusPoint(Settings.getInstance().centerPoint());
+        Double2D initialOffset = new Double2D(1,0.3);
+        setFocusPoint(Double2D.multiply(Settings.getInstance().centerPoint(),initialOffset));
         setAction(false);
         createHandlers();
         linkHandlers(scene);
@@ -73,7 +74,7 @@ public class InputManager {
         return focusPoint;
     }
 
-    private void setAction(boolean a){
+    private void setAction(boolean action){
         this.action= action;
     }
 
