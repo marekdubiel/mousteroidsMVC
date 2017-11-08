@@ -1,8 +1,10 @@
 package com.marekdubiel.main.view;
 
 import com.marekdubiel.main.additional.Double2D;
+import com.marekdubiel.main.model.ObjectManager;
 import com.marekdubiel.main.model.Settings;
 
+import javafx.application.Platform;
 import javafx.scene.Cursor;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -12,6 +14,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.util.List;
 
@@ -29,23 +32,23 @@ public class Window {
 
     private void initializeWindow(){
         stage.setTitle("mousteroids");
-        Group root = new Group();
+        root = new Pane();
         canvas = new Canvas(Settings.getInstance().getWindowWidth(), Settings.getInstance().getWindowHeight());
         graphicsContext = canvas.getGraphicsContext2D();
         root.getChildren().add(canvas);
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
+        stage.sizeToScene();
         root.setCursor(Cursor.NONE);
         clear();
         endFrame();
         ViewManager.getInstance().setReady(true);
-
-
+        exitProgramIfWindowClosed();
     }
 
     public void clear(){
-        graphicsContext.setFill(Color.BLACK);
+        graphicsContext.setFill(Color. BLACK);
         graphicsContext.fillRect(0,0,canvas.getWidth(),canvas.getHeight());
     }
 
@@ -59,5 +62,13 @@ public class Window {
 
     public Scene getScene(){
         return scene;
+    }
+
+    private void exitProgramIfWindowClosed(){
+        stage.setOnCloseRequest(event -> {
+            ObjectManager.getInstance().setRunning(false);
+            Platform.exit();
+        });
+
     }
 }

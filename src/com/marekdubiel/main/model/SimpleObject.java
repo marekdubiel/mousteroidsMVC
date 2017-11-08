@@ -14,12 +14,11 @@ public class SimpleObject {
     private boolean alive;
 
     public SimpleObject(){
-
     }
 
     public void initializeGeneralObject(Double2D position){
         setPosition(position);
-        setAlive(true);
+        ObjectManager.getInstance().addObject(this);
     }
     public void initializeImageObject(String shape, int layer, double rotation, double scale){
         setRotation(rotation);

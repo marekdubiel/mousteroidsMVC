@@ -14,12 +14,10 @@ public class Menu {
     }
 
     public void start(){
-        System.out.println("start");
         player = new PlayerObject();
     }
     public void update(double delta){
-        if(player != null)
-            player.update(delta);
+
     }
 
     private void terminate(){

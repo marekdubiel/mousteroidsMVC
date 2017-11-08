@@ -3,9 +3,13 @@ package com.marekdubiel.main.model;
 import com.marekdubiel.main.additional.Updatable;
 import com.marekdubiel.main.view.ViewManager;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ObjectManager implements Updatable {
 
     private static ObjectManager instance;
+    private ArrayList<SimpleObject> objects;
     private boolean running;
     private GameState gameState;
 
@@ -21,7 +25,7 @@ public class ObjectManager implements Updatable {
     public void initializeModel() {
         setRunning(true);
         runMainLoop();
-
+        objects = new ArrayList<>();
     }
 
     public void runMainLoop(){
@@ -47,7 +51,6 @@ public class ObjectManager implements Updatable {
     public void startGame(){
         Game.getInstance().start();
         setGameState(gameState.GAME);
-
     }
 
     @Override
@@ -55,7 +58,7 @@ public class ObjectManager implements Updatable {
         GUI.getInstance().update();
         Game.getInstance().update(delta);
         Menu.getInstance().update(delta);
-
+        updateObjects(delta);
     }
 
 
@@ -67,7 +70,16 @@ public class ObjectManager implements Updatable {
     public boolean getRuning(){
         return running;
     }
+    public void updateObjects(double delta){
+        if(objects!=null)
+            objects.removeIf(object -> object.getAlive()==false);
+        objects.forEach(object -> object.update(delta));
+    }
 
+    public void addObject(SimpleObject object){
+        object.setAlive(true);
+        objects.add(object);
+    }
     public void setGameState(GameState gameState) {
         this.gameState = gameState;
     }

@@ -21,16 +21,10 @@ public class Main extends Application {
         initializeView(stage);
         initializeController(stage.getScene());
         initializeModel();
-        start();
+        startGame();
     }
 
-    @Override
-    public void stop (){
-        ObjectManager.getInstance().setRunning(false);
-        System.out.println("koniec");
-    }
-
-    private void start(){
+    private void startGame(){
         ObjectManager.getInstance().start();
     }
 
