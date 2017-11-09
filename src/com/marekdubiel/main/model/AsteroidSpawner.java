@@ -9,13 +9,14 @@ import javafx.util.Duration;
 
 public class AsteroidSpawner {
 
+    SimpleObject target;
     private int asteroidCount;
     private boolean spawning;
 
-    public AsteroidSpawner(){
+    public AsteroidSpawner(SimpleObject target){
+        this.target = target;
         initializeTimer();
         asteroidCount = 0;
-        spawning = false;
 
     }
 
@@ -24,6 +25,7 @@ public class AsteroidSpawner {
         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(1000),ae -> trySpawningAsteroid()));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
+        setSpawning(true);
     }
 
     private void trySpawningAsteroid(){
@@ -55,12 +57,9 @@ public class AsteroidSpawner {
                 startingY = Settings.getInstance().getWindowHeight() * -0.1;
                 break;
         }
+        Double2D asteroidPosition = new Double2D(startingX,startingY);
 
-
-        AsteroidObject asteroid = new AsteroidObject();
-        asteroid.setPosition(new Double2D(startingX,startingY));
-        asteroid.setRotation(Calculate.direction(asteroid.getPosition(),Game.getInstance().getPlayerPosition()));
-        Game.getInstance().addAsteroid(asteroid);
+        new AsteroidObject(asteroidPosition,Calculate.direction(target.getPosition(),asteroidPosition));
     }
 
     public void setSpawning(boolean spawning){

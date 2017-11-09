@@ -13,6 +13,7 @@ public class SimpleObject {
     private double scale;
     private boolean alive;
     private boolean ready;
+    private Blinker blinker;
 
     public SimpleObject(){
         setReady(false);
@@ -81,17 +82,17 @@ public class SimpleObject {
         return ready;
     }
 
-    public void moveAhead(){
-
+    public void update(double delta) {
+        if(blinker!=null && blinker.isWorking())
+            blinker.update();
     }
 
-    public void moveReverse(){
-
+    public void blink(long time, int blinks, boolean visibleAfter){
+        blinker = new Blinker(getSprite(),time,blinks,visibleAfter);
     }
 
-    public void update(double delta){
-
+    public Blinker getBlinker() {
+        return blinker;
     }
-
 
 }

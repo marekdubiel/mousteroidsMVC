@@ -59,20 +59,22 @@ public class ImageSprite extends Sprite {
     @Override
     public void update() {
         super.update();
-        updatedVertices = scaleVertices(vertices,scale);
-        updatedVertices = rotateVertices(updatedVertices,rotation);
-        updatedVertices = translateVertices(updatedVertices,position);
+        updatedVertices = scaleVertices(vertices,getScale());
+        updatedVertices = rotateVertices(updatedVertices,getRotation());
+        updatedVertices = translateVertices(updatedVertices,getPosition());
     }
 
     @Override
-    public void render(GraphicsContext graphicsContext){
+    public void render(GraphicsContext graphicsContext) {
         update();
-        graphicsContext.setFill(fillColor);
-        graphicsContext.setStroke(strokeColor);
-        graphicsContext.setLineWidth(strokeWidth);
-        if(fillColor!=null)
-            graphicsContext.fillPolygon(calculateX(updatedVertices),calculateY(updatedVertices),calculatePoints(updatedVertices));
-        graphicsContext.strokePolygon(calculateX(updatedVertices),calculateY(updatedVertices),calculatePoints(updatedVertices));
+        if (isVisible()) {
+            graphicsContext.setFill(fillColor);
+            graphicsContext.setStroke(strokeColor);
+            graphicsContext.setLineWidth(strokeWidth);
+            if (fillColor != null)
+                graphicsContext.fillPolygon(calculateX(updatedVertices), calculateY(updatedVertices), calculatePoints(updatedVertices));
+            graphicsContext.strokePolygon(calculateX(updatedVertices), calculateY(updatedVertices), calculatePoints(updatedVertices));
+        }
     }
 
     private double[] calculateX(ArrayList<Double2D> vertices){

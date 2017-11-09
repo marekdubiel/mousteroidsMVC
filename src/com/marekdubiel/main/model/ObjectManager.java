@@ -1,17 +1,23 @@
 package com.marekdubiel.main.model;
 
+import com.marekdubiel.main.additional.Double2D;
 import com.marekdubiel.main.additional.Updatable;
 import com.marekdubiel.main.view.ViewManager;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class ObjectManager implements Updatable {
 
     private static ObjectManager instance;
-    private ArrayList<SimpleObject> objects;
+    private volatile List<SimpleObject> objects;
+    private BulletSpawner bulletSpawner;
     private boolean running;
     private GameState gameState;
+    private Menu menu;
+    private Game game;
 
     public static ObjectManager getInstance() {
         if(instance==null)
@@ -25,7 +31,9 @@ public class ObjectManager implements Updatable {
     public void initializeModel() {
         setRunning(true);
         runMainLoop();
-        objects = new ArrayList<>();
+        objects = Collections.synchronizedList(new ArrayList());
+        menu = new Menu();
+        game = new Game();
     }
 
     public void runMainLoop(){
@@ -44,23 +52,26 @@ public class ObjectManager implements Updatable {
     }
 
     public void startMenu(){
-        Menu.getInstance().start();
-        setGameState(gameState.MENU);
+        menu.start();
     }
 
     public void startGame(){
-        Game.getInstance().start();
-        setGameState(gameState.GAME);
+        game.start();
     }
 
     @Override
     public void update(double delta){
         GUI.getInstance().update();
-        Game.getInstance().update(delta);
-        Menu.getInstance().update(delta);
+        updateGameAndMenu(delta);
         updateObjects(delta);
     }
 
+    public void updateGameAndMenu(double delta){
+        if(game!=null)
+            game.update(delta);
+        if(menu!=null)
+            menu.update(delta);
+    }
 
     public void setRunning(boolean running) {
         this.running = running;
@@ -71,15 +82,17 @@ public class ObjectManager implements Updatable {
         return running;
     }
     public void updateObjects(double delta){
-        if(objects!=null)
-            objects.removeIf(object -> object.getAlive()==false);
-        objects.forEach(object -> object.update(delta));
+        if(objects!=null) {
+            objects.removeIf(object -> !object.getAlive());
+            objects.forEach(object -> object.update(delta));
+        }
     }
 
     public void addObject(SimpleObject object){
         object.setAlive(true);
         objects.add(object);
     }
+
     public void setGameState(GameState gameState) {
         this.gameState = gameState;
     }
@@ -88,5 +101,8 @@ public class ObjectManager implements Updatable {
         return gameState;
     }
 
+    public Game getGame() {
+        return game;
+    }
 
 }

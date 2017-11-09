@@ -37,10 +37,14 @@ public class ViewManager implements Renderable {
 
     public void render(){
         Platform.runLater(()-> {
-            window.clear();
-            drawLayers();
-            window.endFrame();
+            safelyRenderLater();
         });
+    }
+
+    private void safelyRenderLater(){
+        window.clear();
+        drawLayers();
+        window.endFrame();
     }
 
     private void drawLayers(){

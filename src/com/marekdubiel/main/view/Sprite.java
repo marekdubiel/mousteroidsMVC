@@ -8,16 +8,20 @@ import javafx.scene.canvas.GraphicsContext;
 import java.util.ArrayList;
 
 public abstract class Sprite {
-    SimpleObject parent;
-    Double2D position;
-    double rotation;
-    double scale;
-    boolean needed;
+    private SimpleObject parent;
+    private Double2D position;
+    private double rotation;
+    private double scale;
+    private boolean needed;
+    private boolean visible;
+
     int layer;
 
     public Sprite(SimpleObject object, int layer){
         this.parent = object;
         setLayer(layer);
+        setVisible(true);
+
     }
 
     abstract void render(GraphicsContext graphicsContext);
@@ -39,7 +43,7 @@ public abstract class Sprite {
         this.needed = needed;
     }
 
-    public boolean getNeeded(){
+    public boolean isNeeded(){
         return needed;
     }
 
@@ -49,5 +53,37 @@ public abstract class Sprite {
 
     public int getLayer(){
         return layer;
+    }
+
+    public void setScale (double scale){
+        this.scale = scale;
+    }
+
+    public double getScale() {
+        return scale;
+    }
+
+    public void setRotation (double rotation){
+        this.rotation = rotation;
+    }
+
+    public double getRotation() {
+        return rotation;
+    }
+
+    public void setPosition(Double2D position) {
+        this.position = position;
+    }
+
+    public Double2D getPosition() {
+        return position;
+    }
+
+    public boolean isVisible() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
     }
 }

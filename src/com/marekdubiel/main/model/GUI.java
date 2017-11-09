@@ -74,4 +74,5 @@ public class GUI {
     public void update(){
         updateHearts();
     }
+
 }

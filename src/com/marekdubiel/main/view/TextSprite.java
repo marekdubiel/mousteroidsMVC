@@ -30,20 +30,20 @@ public class TextSprite extends Sprite {
         activateSprite(layer);
     }
 
-    public void setText(String text) {
+    private void setText(String text) {
         this.text = text;
     }
 
-    public void setWhiteFont(){
+    private void setWhiteFont(){
         this.fontColor = Color.WHITE;
+    }
+
+    private void setBlackFont(){
+        this.fontColor = Color.BLACK;
     }
 
     public void reverseFontColor(){
         this.fontColor = Color.rgb(255-(int)(fontColor.getRed()*255),255-(int)(fontColor.getGreen()*255),255-((int)fontColor.getBlue()*255));
-    }
-
-    public void setBlackFont(){
-        this.fontColor = Color.BLACK;
     }
 
     private void setSquidFont(){
@@ -58,12 +58,13 @@ public class TextSprite extends Sprite {
 
     public void render(GraphicsContext graphicsContext){
         super.update();
-        graphicsContext.setTextAlign(TextAlignment.CENTER);
-        graphicsContext.setTextBaseline(VPos.CENTER);
-        graphicsContext.setFill(fontColor);
-        graphicsContext.setFont(font);
-        graphicsContext.fillText(text,position.getX(),position.getY());
-
+        if(isVisible()) {
+            graphicsContext.setTextAlign(TextAlignment.CENTER);
+            graphicsContext.setTextBaseline(VPos.CENTER);
+            graphicsContext.setFill(fontColor);
+            graphicsContext.setFont(font);
+            graphicsContext.fillText(text, getPosition().getX(), getPosition().getY());
+        }
     }
 
     public ArrayList<Double2D> getBounds(){

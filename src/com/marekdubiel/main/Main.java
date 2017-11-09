@@ -32,7 +32,7 @@ public class Main extends Application {
         Settings.getInstance().setFps(25);
         Settings.getInstance().setWindowWidth(640);
         Settings.getInstance().setWindowHeight(480);
-        Settings.getInstance().setDifficulty(1.5);
+        Settings.getInstance().setDifficulty(3);
         Settings.getInstance().setLifeAmount(5);
     }
 

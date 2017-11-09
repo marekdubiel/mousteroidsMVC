@@ -27,10 +27,12 @@ public class ButtonObject  extends SimpleObject{
 
     @Override
     public void update(double delta){
+        super.update(delta);
         if(getReady() && additionalTextSprite!=null) {
             setRotation(getRotation() + 1.5 * delta);
             switchHighlighted();
             checkChosen();
+            blinkAdditionalSprite();
         }
     }
 
@@ -46,6 +48,9 @@ public class ButtonObject  extends SimpleObject{
         return Geometry.singleVertexIsIncluded(calculateBounds(), InputManager.getInstance().getFocusPoint());
     }
 
+    private void blinkAdditionalSprite(){
+        additionalTextSprite.setVisible(getSprite().isVisible());
+    }
     private ArrayList<Double2D> calculateBounds(){
         ArrayList<Double2D> calculatedBounds;
         calculatedBounds = getSprite().getBounds();

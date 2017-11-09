@@ -6,68 +6,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
-    private static Game instance;
-    private AsteroidSpawner spawner = new AsteroidSpawner();
-    private List<AsteroidObject> asteroids;
-    private List<BulletObject> bullets;
+    private AsteroidSpawner asteroidSpawner;
+    private BulletSpawner bulletSpawner;
     private PlayerObject player;
-    private GUI gui;
-    private GameOverSubmenu gameOverSubmenu;
 
-    public static Game getInstance() {
-        if(instance==null)
-            instance = new Game();
-        return instance;
-    }
-
-    private Game(){
+    public Game(){
 
     }
 
     public void start() {
-        initializeObjectLists();
         initializePlayer();
-    }
+        initializeBulletSpawner();
+        initializeAsteroidSpawner();
 
-    public void update(double delta){
-        if(player!=null)
-            player.update(delta);
-        manageGameObjects(asteroids,delta);
-        manageGameObjects(bullets,delta);
-    }
-
-    public void terminate(){
-        asteroids.clear();
-        bullets.clear();
-        player = null;
-        gui = null;
-    }
-
-    private void initializeObjectLists(){
-        asteroids =new ArrayList<>();
-        bullets = new ArrayList<>();
     }
 
     private void initializePlayer(){
         player = new PlayerObject();
     }
 
-    public void manageGameObjects(List<? extends CollidableObject> instances, double delta) {
-        if(instances!=null) {
-            instances.forEach(instance -> instance.update(delta));
-            instances.removeIf(instance -> instance.getAlive() == false);
-        }
+    private void initializeBulletSpawner(){
+        bulletSpawner = new BulletSpawner(player);
     }
 
-    public void addAsteroid(AsteroidObject asteroid){
-        asteroids.add(asteroid);
+    private void initializeAsteroidSpawner(){
+        asteroidSpawner = new AsteroidSpawner(player);
     }
 
-    public void addBullet(BulletObject bullet){
-        bullets.add(bullet);
+    public void update(double delta){
+        if(bulletSpawner!=null)
+            bulletSpawner.shootBulletIfPrepared();
     }
 
-    public Double2D getPlayerPosition(){
-        return player.getPosition();
+    public BulletSpawner getBulletSpawner() {
+        return bulletSpawner;
+    }
+
+    public AsteroidSpawner getAsteroidSpawner() {
+        return asteroidSpawner;
     }
 }
