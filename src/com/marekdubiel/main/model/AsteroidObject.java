@@ -110,7 +110,6 @@ public class AsteroidObject extends CollidableObject {
     private void hitPlayer(PlayerObject playerHit){
         setDirection(calculateAtan2(this, playerHit));
         playerHit.swirl(calculateAtan2(playerHit, this), getSpeed()/2, 1000);
-        ObjectManager.getInstance().getGame().getParticleSystem().explode(playerHit.getPosition(),8);
     }
 
     private void checkHitPoints(){

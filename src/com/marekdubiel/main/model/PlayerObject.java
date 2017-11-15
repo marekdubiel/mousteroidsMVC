@@ -94,6 +94,7 @@ public class PlayerObject extends CollidableObject {
         swirler = new Swirler(direction, speed, time, getRotation(), this);
         blink(time, 16, true);
         jet.getSprite().setVisible(false);
+        ObjectManager.getInstance().getGame().getParticleSystem().explode(getPosition(),8);
     }
 
     private void checkLife(){
