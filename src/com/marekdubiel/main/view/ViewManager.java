@@ -51,8 +51,8 @@ public class ViewManager implements Renderable {
         layers.forEach(layer -> layer.drawSprites(window.getGraphicsContext()));
     }
 
-    public void addSprite(Sprite sprite, int layer){
-        layers.get(sprite.getLayer()).addSprite(sprite);
+    public void addDrawable(Drawable drawable, int layer){
+        layers.get(layer).addDrawable(drawable);
     }
 
     public boolean getReady(){

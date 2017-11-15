@@ -1,14 +1,11 @@
 package com.marekdubiel.main.view;
 
 import com.marekdubiel.main.additional.Double2D;
-import com.marekdubiel.main.model.CollidableObject;
 import com.marekdubiel.main.model.SimpleObject;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
 
 import static com.marekdubiel.main.additional.Geometry.rotateVertices;
 import static com.marekdubiel.main.additional.Geometry.scaleVertices;
@@ -22,13 +19,13 @@ public class ImageSprite extends Sprite {
     private double strokeWidth;
 
     public ImageSprite(String shape, int layer, SimpleObject parent){
-        super(parent, layer);
+        super(parent);
         assignShape(shape);
         activateSprite(layer);
     }
 
     private void activateSprite(int layer){
-        ViewManager.getInstance().addSprite(this, layer);
+        ViewManager.getInstance().addDrawable(this, layer);
         super.update();
     }
 
@@ -99,4 +96,7 @@ public class ImageSprite extends Sprite {
         return vertices;
     }
 
+    public void setUpdatedVertices(ArrayList<Double2D> updatedVertices) {
+        this.updatedVertices = updatedVertices;
+    }
 }

@@ -1,6 +1,5 @@
 package com.marekdubiel.main.model;
 
-import com.marekdubiel.main.additional.Collidable;
 import com.marekdubiel.main.additional.Double2D;
 import com.marekdubiel.main.additional.Geometry;
 import com.marekdubiel.main.controller.InputManager;

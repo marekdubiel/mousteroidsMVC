@@ -6,16 +6,16 @@ import com.marekdubiel.main.additional.Double2D;
 import static java.lang.System.currentTimeMillis;
 
 public class BulletSpawner {
-    private SimpleObject shootingObject;
+    private PlayerObject shootingObject;
     private boolean bulletPrepared;
     private long shootingStartTime;
     private long delay;
     private double spawnDistance;
 
-    public BulletSpawner(SimpleObject shootingObject){
+    public BulletSpawner(PlayerObject shootingObject){
         this.shootingObject = shootingObject;
         setBulletPrepared(false);
-        delay = 250;
+        delay = 175;
         spawnDistance = 15;
     }
 
@@ -37,8 +37,10 @@ public class BulletSpawner {
     }
 
     private void shoot(){
-        Double2D bulletPosition = Calculate.pointByDistanceAndDirection(shootingObject.getPosition(),shootingObject.getRotation(),spawnDistance);
-        new BulletObject(bulletPosition, shootingObject.getRotation());
+        if(shootingObject!=null && shootingObject.isAlive() && !shootingObject.isShootingDisabled()) {
+            Double2D bulletPosition = Calculate.pointByDirectionAndDistance(shootingObject.getPosition(), shootingObject.getRotation(), spawnDistance);
+            new BulletObject(bulletPosition, shootingObject.getRotation());
+        }
     }
 
     public void startShootingTimer(){

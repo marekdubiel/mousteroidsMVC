@@ -8,7 +8,7 @@ public class Settings {
     private int fps;
     private int windowWidth;
     private int windowHeight;
-    private double difficulty;
+    private double baseDifficulty;
     private int lifeAmount;
 
     public static Settings getInstance(){
@@ -29,8 +29,8 @@ public class Settings {
         this.windowHeight = windowHeight;
     }
 
-    public void setDifficulty(double difficulty){
-        this.difficulty = difficulty;
+    public void setBaseDifficulty(double baseDifficulty){
+        this.baseDifficulty = baseDifficulty;
     }
 
     public void setLifeAmount(int lifeAmount){
@@ -45,8 +45,8 @@ public class Settings {
         return windowHeight;
     }
 
-    public double getDifficulty(){
-        return difficulty;
+    public double getBaseDifficulty(){
+        return baseDifficulty;
     }
 
     public int getLifeAmount(){

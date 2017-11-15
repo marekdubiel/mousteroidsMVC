@@ -19,7 +19,7 @@ public class ShapeCreator {
                 break;
             case "jet":
                 parent.setVertices(loadFromFile(path,2));
-                parent.setFillColor(Color.BLACK);
+                parent.setFillColor(Color.WHITE);
                 break;
             case "crosshair":
                 parent.setVertices(loadFromFile(path,4));
@@ -27,7 +27,7 @@ public class ShapeCreator {
                 break;
             case "bullet":
                 parent.setVertices(loadFromFile(path,6));
-                parent.setFillColor(Color.BLACK);
+                parent.setFillColor(Color.WHITE);
                 break;
             case "heartEmpty":
                 parent.setVertices(loadFromFile(path,8));
@@ -46,7 +46,7 @@ public class ShapeCreator {
                 parent.setFillColor(Color.BLACK);
                 break;
             case "asteroidBig":
-                parent.setVertices(generateRandomAsteroidShape(3));
+                parent.setVertices(generateRandomAsteroidShape(4));
                 parent.setFillColor(Color.BLACK);
                 break;
             default:
@@ -79,8 +79,8 @@ public class ShapeCreator {
     }
 
     public static ArrayList<Double2D> generateRandomAsteroidShape(int size){
-        int sides = 9+size +(int)(Math.random()*6);
-        ArrayList<Double2D> vertices = new ArrayList<Double2D>();
+        int sides = 8+size +(int)(Math.random()*6);
+        ArrayList<Double2D> vertices = new ArrayList<>();
         for(int i=0;i<sides; i++){
             double angle = i*(360.0/sides) + Math.random()*(360.0/sides);
             double radius = Math.random()*4.5 + 5+size;

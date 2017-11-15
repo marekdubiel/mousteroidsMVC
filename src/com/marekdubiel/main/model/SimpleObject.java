@@ -16,6 +16,7 @@ public class SimpleObject {
     private Blinker blinker;
 
     public SimpleObject(){
+        setAlive(true);
         setReady(false);
     }
 
@@ -36,6 +37,19 @@ public class SimpleObject {
         setScale(1);
         sprite = new TextSprite(text, size, layer, this, whiteFont);
         setReady(true);
+    }
+
+    public void update(double delta) {
+        if(blinker!=null && blinker.isWorking())
+            blinker.update();
+    }
+
+    public void blink(long time, int blinks, boolean visibleAfter){
+        blinker = new Blinker(getSprite(),time,blinks,visibleAfter);
+    }
+
+    public Blinker getBlinker() {
+        return blinker;
     }
 
     public Sprite getSprite(){
@@ -70,7 +84,7 @@ public class SimpleObject {
         this.alive = alive;
     }
 
-    public boolean getAlive(){
+    public boolean isAlive(){
         return alive;
     }
 
@@ -80,19 +94,6 @@ public class SimpleObject {
 
     public boolean getReady(){
         return ready;
-    }
-
-    public void update(double delta) {
-        if(blinker!=null && blinker.isWorking())
-            blinker.update();
-    }
-
-    public void blink(long time, int blinks, boolean visibleAfter){
-        blinker = new Blinker(getSprite(),time,blinks,visibleAfter);
-    }
-
-    public Blinker getBlinker() {
-        return blinker;
     }
 
 }

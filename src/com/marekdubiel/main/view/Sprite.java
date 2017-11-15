@@ -1,13 +1,12 @@
 package com.marekdubiel.main.view;
 
 import com.marekdubiel.main.additional.Double2D;
-import com.marekdubiel.main.model.CollidableObject;
 import com.marekdubiel.main.model.SimpleObject;
 import javafx.scene.canvas.GraphicsContext;
 
 import java.util.ArrayList;
 
-public abstract class Sprite {
+public abstract class Sprite implements Drawable {
     private SimpleObject parent;
     private Double2D position;
     private double rotation;
@@ -15,25 +14,24 @@ public abstract class Sprite {
     private boolean needed;
     private boolean visible;
 
-    int layer;
-
-    public Sprite(SimpleObject object, int layer){
+    public Sprite(SimpleObject object){
         this.parent = object;
-        setLayer(layer);
         setVisible(true);
 
     }
 
-    abstract void render(GraphicsContext graphicsContext);
+    public void render(GraphicsContext graphicsContext){
+
+    };
 
     public abstract ArrayList<Double2D> getBounds();
 
     public void update(){
         if(parent!=null) {
-            setNeeded(parent.getAlive());
-            position = parent.getPosition();
-            rotation = parent.getRotation();
-            scale = parent.getScale();
+            setNeeded(parent.isAlive());
+            setPosition(parent.getPosition());
+            setRotation(parent.getRotation());
+            setScale(parent.getScale());
         }else{
             setNeeded(false);
         }
@@ -45,14 +43,6 @@ public abstract class Sprite {
 
     public boolean isNeeded(){
         return needed;
-    }
-
-    public void setLayer(int layer){
-        this.layer = Math.min(9,Math.max(0,layer));
-    }
-
-    public int getLayer(){
-        return layer;
     }
 
     public void setScale (double scale){

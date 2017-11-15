@@ -29,10 +29,10 @@ public class Main extends Application {
     }
 
     private void setRules(){
-        Settings.getInstance().setFps(25);
-        Settings.getInstance().setWindowWidth(640);
-        Settings.getInstance().setWindowHeight(480);
-        Settings.getInstance().setDifficulty(3);
+        Settings.getInstance().setFps(30);
+        Settings.getInstance().setWindowWidth(720);
+        Settings.getInstance().setWindowHeight(560);
+        Settings.getInstance().setBaseDifficulty(3);
         Settings.getInstance().setLifeAmount(5);
     }
 

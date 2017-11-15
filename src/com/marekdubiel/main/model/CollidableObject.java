@@ -3,8 +3,6 @@ package com.marekdubiel.main.model;
 import com.marekdubiel.main.additional.Calculate;
 import com.marekdubiel.main.additional.Collidable;
 import com.marekdubiel.main.additional.Double2D;
-import com.marekdubiel.main.view.ImageSprite;
-import com.marekdubiel.main.view.Sprite;
 
 import java.util.ArrayList;
 
@@ -37,7 +35,7 @@ public class CollidableObject extends SimpleObject implements Collidable{
     }
 
     private void move(double delta){
-        setPosition(Calculate.pointByDistanceAndDirection(getPosition(),getDirection(),getSpeed()*delta));
+        setPosition(Calculate.pointByDirectionAndDistance(getPosition(),getDirection(),getSpeed()*delta));
     }
 
     public void assignBoundingBoxFromSprite(){
@@ -75,5 +73,9 @@ public class CollidableObject extends SimpleObject implements Collidable{
 
     public void setMaxSpeed(double maxSpeed) {
         this.maxSpeed = maxSpeed;
+    }
+
+    public void moveInDirection(double direction, double distance){
+        setPosition(Calculate.pointByDirectionAndDistance(getPosition(),direction,distance));
     }
 }

@@ -25,12 +25,17 @@ public class Score {
         this.score = score;
     }
 
+    public int getScore() {
+        return score;
+    }
+
     private void setPreviousScore(int previousScore){
         this.previousScore = previousScore;
     }
 
     public void update(){
         if(score != previousScore){
+            textObject.getSprite().setVisible(false);
             textObject.setAlive(false);
             createTextObject(position,score);
             previousScore = score;

@@ -5,8 +5,8 @@ import com.marekdubiel.main.additional.Double2D;
 public class BulletObject extends CollidableObject {
 
     public BulletObject(Double2D position, double direction){
-        super.initializeCollidableObject("bullet",2, position, direction,1);
-        setSpeed(20);
+        super.initializeCollidableObject("bullet",2, position, direction,1.5);
+        setSpeed(35);
         setMaxSpeed(getSpeed());
     }
 

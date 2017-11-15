@@ -17,7 +17,7 @@ public class TextSprite extends Sprite {
     private Font font;
 
     public TextSprite(String text, Double size, int layer, SimpleObject parent, boolean whiteFont){
-        super(parent, layer);
+        super(parent);
         setText(text);
         this.size = size;
 
@@ -51,7 +51,7 @@ public class TextSprite extends Sprite {
     }
 
     private void activateSprite(int layer){
-        ViewManager.getInstance().addSprite(this,layer);
+        ViewManager.getInstance().addDrawable(this,layer);
         super.update();
 
     }

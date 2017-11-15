@@ -1,11 +1,9 @@
 package com.marekdubiel.main.model;
 
-import com.marekdubiel.main.additional.Double2D;
 import com.marekdubiel.main.additional.Updatable;
 import com.marekdubiel.main.view.ViewManager;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,9 +11,7 @@ public class ObjectManager implements Updatable {
 
     private static ObjectManager instance;
     private volatile List<SimpleObject> objects;
-    private BulletSpawner bulletSpawner;
     private boolean running;
-    private GameState gameState;
     private Menu menu;
     private Game game;
 
@@ -52,25 +48,32 @@ public class ObjectManager implements Updatable {
     }
 
     public void startMenu(){
-        menu.start();
+        if(GUI.getInstance().getHeartsAmount()==0)
+            menu.start("game over", "restart");
+        else
+            menu.start("mAuSTEROIDS", "start");
+
+
     }
 
     public void startGame(){
+        cleanUpObjects();
         game.start();
+        GUI.getInstance().resetScore();
     }
 
     @Override
     public void update(double delta){
         GUI.getInstance().update();
-        updateGameAndMenu(delta);
+        updateGameAndMenu();
         updateObjects(delta);
     }
 
-    public void updateGameAndMenu(double delta){
+    public void updateGameAndMenu(){
         if(game!=null)
-            game.update(delta);
+            game.update();
         if(menu!=null)
-            menu.update(delta);
+            menu.update();
     }
 
     public void setRunning(boolean running) {
@@ -83,7 +86,7 @@ public class ObjectManager implements Updatable {
     }
     public void updateObjects(double delta){
         if(objects!=null) {
-            objects.removeIf(object -> !object.getAlive());
+            objects.removeIf(object -> !object.isAlive());
             objects.forEach(object -> object.update(delta));
         }
     }
@@ -93,16 +96,24 @@ public class ObjectManager implements Updatable {
         objects.add(object);
     }
 
-    public void setGameState(GameState gameState) {
-        this.gameState = gameState;
+    private void cleanUpObjects(){
+        if(objects!=null) {
+            for(SimpleObject object : objects){
+                if(object instanceof AsteroidObject || object instanceof BulletObject){
+                    object.setAlive(false);
+                }
+            }
+        }
     }
 
-    public GameState getGameState() {
-        return gameState;
+    public List<SimpleObject> getObjects() {
+        return objects;
     }
 
     public Game getGame() {
         return game;
     }
+
+
 
 }

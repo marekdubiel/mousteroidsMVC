@@ -18,7 +18,7 @@ public class Calculate {
         return direction;
     }
 
-    public static Double2D pointByDistanceAndDirection(Double2D fromPoint, double direction, double distance){
+    public static Double2D pointByDirectionAndDistance(Double2D fromPoint, double direction, double distance){
         double x = -distance * Math.cos(Math.toRadians(direction));
         double y = -distance * Math.sin(Math.toRadians(direction));
         return Double2D.add(fromPoint,new Double2D(x,y));

@@ -7,20 +7,20 @@ import java.util.Collections;
 import java.util.List;
 
 public class Layer {
-    private volatile List<Sprite> sprites;
+    private volatile List<Drawable> drawables;
 
     public Layer(){
-        sprites = Collections.synchronizedList(new ArrayList());
+        drawables = Collections.synchronizedList(new ArrayList());
     }
 
     public void drawSprites(GraphicsContext graphicsContext){
-        if(sprites!=null)
-            sprites.removeIf(sprite -> !sprite.isNeeded());
-        sprites.forEach(sprite -> sprite.render(graphicsContext));
+        if(drawables!=null)
+            drawables.removeIf(drawable -> !drawable.isNeeded());
+        drawables.forEach(drawable -> drawable.render(graphicsContext));
     }
 
-    public void addSprite(Sprite sprite){
-        sprite.setNeeded(true);
-        sprites.add(sprite);
+    public void addDrawable(Drawable drawable){
+        drawable.setNeeded(true);
+        drawables.add(drawable);
     }
 }

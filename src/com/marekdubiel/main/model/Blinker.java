@@ -7,7 +7,7 @@ import static java.lang.System.currentTimeMillis;
 public class Blinker {
     private Sprite sprite;
     private long time;
-    private Long timeOfCreation;
+    private long timeOfCreation;
     private int blinks;
     private int currentBlink;
     private boolean working;
@@ -21,6 +21,7 @@ public class Blinker {
         timeOfCreation = currentTimeMillis();
         currentBlink = 0;
         setWorking(true);
+        sprite.setVisible(false);
     }
 
     public void update(){

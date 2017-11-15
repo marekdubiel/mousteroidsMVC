@@ -7,8 +7,10 @@ import java.util.ArrayList;
 
 public class GUI {
     static GUI instance;
-    SimpleObject[] hearts;
-    PlayerObject player;
+    private SimpleObject[] hearts;
+    private int heartsAmount;
+    private PlayerObject player;
+    private Score score;
 
     public static GUI getInstance() {
         if(instance==null)
@@ -42,11 +44,11 @@ public class GUI {
 
     private void createScore(){
         Double2D scorePosition = Double2D.multiply(Settings.getInstance().centerPoint(),new Double2D(1,0.18));
-        Score score = new Score(scorePosition);
+        score = new Score(scorePosition);
     }
 
     private void createHearts(){
-        int heartsAmount = Settings.getInstance().getLifeAmount();
+        heartsAmount = Settings.getInstance().getLifeAmount();
         hearts = new SimpleObject[heartsAmount];
         for(int i=0;i<hearts.length;i++){
             hearts[i] = new SimpleObject();
@@ -59,20 +61,44 @@ public class GUI {
 
     private void updateHearts(){
         if (player!=null) {
-            if (player.getLife() != Settings.getInstance().getLifeAmount()) {
+            if (player.getLife() != heartsAmount) {
                 for (int i = 0; i < hearts.length; i++) {
-                    if (i+1 < player.getLife())
+                    if (i <= player.getLife()-1)
                         hearts[i].initializeImageObject("heartFull",8, 0,2);
                     else
                         hearts[i].initializeImageObject("heartEmpty",8, 0,2);
 
                 }
+                heartsAmount = player.getLife();
             }
         }
     }
 
-    public void update(){
-        updateHearts();
+    public void updateScore(){
+        if (score!=null)
+            score.update();
     }
 
+    public void update(){
+        updateHearts();
+        updateScore();
+    }
+
+    public int getHeartsAmount() {
+        return heartsAmount;
+    }
+
+    public void addPoints(int addedPoints){
+        score.setScore(score.getScore()+addedPoints);
+    }
+
+    public int getScore(){
+        if(score==null)
+            return 0;
+        return score.getScore();
+    }
+
+    public void resetScore(){
+        score.setScore(0);
+    }
 }
