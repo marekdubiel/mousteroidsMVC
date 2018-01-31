@@ -1,5 +1,5 @@
 # mousteroidsMVC
-  Simple game of asteroids made as a training ground for MVC pattern, multi-threading, pixel perfect collision engine, TDD with jUnit and delta timing in java. Includes use of game objects linked with sprites, modular view, model and controller elements; with model written in pure java and view written in javafx. 
+  Simple game of asteroids made as a training ground for MVC pattern (not in Spring MVC, just pure architectural idea), multi-threading, pixel perfect collision engine, TDD with jUnit and delta timing in java. Includes use of game objects linked with sprites, modular view, model and controller elements; with model written in pure java and view written in javafx. 
   
   Includes more designs patterns such as singletons and dependency injection (in pure java code); static Classes, abstract classes and interfaces, inheritance tree structures and tests. 
   All graphics are vector coded in view module, and may be replaced with other shapes or images (image sprite must have a method returning bounding polygon for model to calculate pixel-perfect collisions - after this initial information game logic doesn't need any data from view module).
